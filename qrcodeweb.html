@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Generator</title>
+</head>
+<body>
+    <h1>QR Code Generator</h1>
+    <form action="/generate_qr" method="POST">
+        <label for="link">Enter link to convert:</label><br>
+        <input type="text" id="link" name="link"><br><br>
+        <label for="name">Enter file name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <input type="submit" value="Generate QR Code">
+        {% if image_path %}
+            <img src="{{ image_path }}" alt="QR Code">
+        {% endif %}
+    </form>
+</body>
+</html>
