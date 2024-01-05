@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, send_file
 import pyqrcode
 from io import BytesIO
+import math
 
 app = Flask(__name__)
 
